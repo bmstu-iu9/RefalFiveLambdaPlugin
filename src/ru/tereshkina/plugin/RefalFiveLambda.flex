@@ -54,19 +54,19 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
 
   //  ^{CPP_INLINE_DELIMETER}$       { yybegin(CPP_INLINE); }
 
-    "$ENUM"         { return RefalFiveLambdaTypes.ENUM; }
-    "$EENUM"        { return RefalFiveLambdaTypes.EENUM; }
-    "$SWAP"         { return RefalFiveLambdaTypes.SWAP; }
-    "$ESWAP"        { return RefalFiveLambdaTypes.ESWAP; }
-    "$INCLUDE"      { return RefalFiveLambdaTypes.INCLUDE; }
-    "$EXTERN"       { return RefalFiveLambdaTypes.EXTERN; }
-    "$EXTRN"        { return RefalFiveLambdaTypes.EXTRN; }
-    "$EXTERNAL"     { return RefalFiveLambdaTypes.EXTERNALL; }
-    "$ENTRY"        { return RefalFiveLambdaTypes.ENTRY; }
-    "$INLINE"       { return RefalFiveLambdaTypes.INLINE; }
     "$DRIVE"        { return RefalFiveLambdaTypes.DRIVE; }
-    "$SPEC"         { return RefalFiveLambdaTypes.SPEC; }
+    "$EENUM"        { return RefalFiveLambdaTypes.EENUM; }
+    "$ENTRY"        { return RefalFiveLambdaTypes.ENTRY; }
+    "$ENUM"         { return RefalFiveLambdaTypes.ENUM; }
+    "$ESWAP"        { return RefalFiveLambdaTypes.ESWAP; }
+    "$EXTERN"       { return RefalFiveLambdaTypes.EXTERN; }
+    "$EXTERNAL"     { return RefalFiveLambdaTypes.EXTERNALL; }
+    "$EXTRN"        { return RefalFiveLambdaTypes.EXTRN; }
     "$FORWARD"      { return RefalFiveLambdaTypes.FORWARD; }
+    "$INCLUDE"      { return RefalFiveLambdaTypes.INCLUDE; }
+    "$INLINE"       { return RefalFiveLambdaTypes.INLINE; }
+    "$SPEC"         { return RefalFiveLambdaTypes.SPEC; }
+    "$SWAP"         { return RefalFiveLambdaTypes.SWAP; }
 
 
     "#"  { return RefalFiveLambdaTypes.SHARP; }

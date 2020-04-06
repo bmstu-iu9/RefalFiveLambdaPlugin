@@ -36,19 +36,19 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
 
     private static Set<IElementType> KEYWORD_ELEMENTS = new HashSet<>();
     static {
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTERN);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ENUM);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.DRIVE);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EENUM);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SWAP);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ESWAP);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ENTRY);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ENUM);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ESWAP);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTERN);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTERNALL);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTRN);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.FORWARD);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INCLUDE);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTRN);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EXTERNALL);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INLINE);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.DRIVE);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SPEC);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SWAP);
     }
 
     private static Set<IElementType> COMMENT_ELEMENTS = new HashSet<>();
