@@ -6,7 +6,6 @@ import com.intellij.lang.PsiBuilder.Marker;
 import static ru.tereshkina.plugin.psi.RefalFiveLambdaTypes.*;
 import static com.intellij.lang.parser.GeneratedParserUtilBase.*;
 import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.tree.IFileElementType;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.tree.TokenSet;
 import com.intellij.lang.PsiParser;
@@ -24,16 +23,15 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     boolean r;
     b = adapt_builder_(t, b, this, null);
     Marker m = enter_section_(b, 0, _COLLAPSE_, null);
-    if (t instanceof IFileElementType) {
-      r = parse_root_(t, b, 0);
-    }
-    else {
-      r = false;
-    }
+    r = parse_root_(t, b);
     exit_section_(b, 0, m, t, r, true, TRUE_CONDITION);
   }
 
-  protected boolean parse_root_(IElementType t, PsiBuilder b, int l) {
+  protected boolean parse_root_(IElementType t, PsiBuilder b) {
+    return parse_root_(t, b, 0);
+  }
+
+  static boolean parse_root_(IElementType t, PsiBuilder b, int l) {
     return Program(b, l + 1);
   }
 
@@ -180,7 +178,6 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // MULTILINE_COMMENT
-  //            // | END_OF_LINE_COMMENT
   //             | LINE_COMMENT
   public static boolean Comment(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Comment")) return false;
@@ -473,14 +470,12 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
   //   | externalDeclaration
   //   | enumDefinition
   //   | swapDefinition
+  //   | labelDefinition
   //   | forwardDeclaration
-  //  // | ForceEntry
   //   | SimpleFunction
-  //  // | Comment
   //   | NativeIns
   //   |KeywordFunction
   //   | SpecDirective
-  //  // | Comment
   //   | SEMICOLON
   public static boolean ProgramElement(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ProgramElement")) return false;
@@ -490,6 +485,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     if (!r) r = externalDeclaration(b, l + 1);
     if (!r) r = enumDefinition(b, l + 1);
     if (!r) r = swapDefinition(b, l + 1);
+    if (!r) r = labelDefinition(b, l + 1);
     if (!r) r = forwardDeclaration(b, l + 1);
     if (!r) r = SimpleFunction(b, l + 1);
     if (!r) r = NativeIns(b, l + 1);
@@ -792,6 +788,19 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     r = consumeToken(b, FORWARD);
     r = r && NameList(b, l + 1);
     exit_section_(b, m, FORWARD_DECLARATION, r);
+    return r;
+  }
+
+  /* ********************************************************** */
+  // LABEL NameList
+  public static boolean labelDefinition(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "labelDefinition")) return false;
+    if (!nextTokenIs(b, LABEL)) return false;
+    boolean r;
+    Marker m = enter_section_(b);
+    r = consumeToken(b, LABEL);
+    r = r && NameList(b, l + 1);
+    exit_section_(b, m, LABEL_DEFINITION, r);
     return r;
   }
 

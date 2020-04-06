@@ -54,6 +54,7 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
     "$FORWARD"      { return RefalFiveLambdaTypes.FORWARD; }
     "$INCLUDE"      { return RefalFiveLambdaTypes.INCLUDE; }
     "$INLINE"       { return RefalFiveLambdaTypes.INLINE; }
+    "$LABEL"        { return RefalFiveLambdaTypes.LABEL; }
     "$SPEC"         { return RefalFiveLambdaTypes.SPEC; }
     "$SWAP"         { return RefalFiveLambdaTypes.SWAP; }
 

@@ -19,6 +19,7 @@ ProgramElement ::=
   | externalDeclaration
   | enumDefinition
   | swapDefinition
+  | labelDefinition
   | forwardDeclaration
   | SimpleFunction
   | NativeIns
@@ -32,6 +33,7 @@ externalDeclaration ::= (EXTERN | EXTRN | EXTERNALL ) NameList
 forwardDeclaration ::= FORWARD NameList
 enumDefinition ::= (ENUM | EENUM) NameList
 swapDefinition ::= (SWAP | ESWAP) NameList
+labelDefinition ::= LABEL NameList
 NameList ::= NAME (COMMA NAME)* SEMICOLON
 Comment ::= MULTILINE_COMMENT
             | LINE_COMMENT

@@ -47,6 +47,7 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.FORWARD);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INCLUDE);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INLINE);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.LABEL);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SPEC);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SWAP);
     }
