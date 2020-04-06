@@ -23,14 +23,10 @@ VARIABLE_TYPE = "s"|"t"|"e"
 
 MULTILINE_COMMENT=(("/*"|"/**")[^"*"]{COMMENT_TAIL})|"/*"
 COMMENT_TAIL=([^"*"]*("*"+[^"*""/"])?)*("*"+"/")?
-//END_OF_LINE_COMMENT=("/""/"|"*")[^\r\n]*
 LINE_COMMENT = "*"[^\r\n]*
 
 CPP_INLINE = "%%"\n(([^%\n].*|%|%[^%\n].*)?\n)*%%
 
-//STRING_LITERAL=\'([^\\\'\r\n]|{ESCAPE_SEQUENCE})*\'
-//CHAR_LETERAL = \"([^\\\'\r\n]|{ESCAPE_SEQUENCE})*\"
-//ESCAPE_SEQUENCE=\\[^\r\n\t\\\"\'\<\>\(\)]
 STRING_LITERAL=\'([^\\\'\r\n]|{ESCAPE_SEQUENCE})*\'
 CHAR_LETERAL = \"([^\\\"\r\n]|{ESCAPE_SEQUENCE})*\"
 ESCAPE_SEQUENCE=\\([rnt\\\"\'\<\>\(\)]|x[0-9a-fA-F][0-9a-fA-F])
@@ -45,14 +41,7 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
 
 %%
 
-//<CPP_INLINE> {
-  //  ^{CPP_INLINE_DELIMETER}$    { yybegin(YYINITIAL); return RefalFiveLambdaTypes.CPP_INLINE; }
-    //. { yybegin(CPP_INLINE); }
-//}
-
 <YYINITIAL> {
-
-  //  ^{CPP_INLINE_DELIMETER}$       { yybegin(CPP_INLINE); }
 
     "$DRIVE"        { return RefalFiveLambdaTypes.DRIVE; }
     "$EENUM"        { return RefalFiveLambdaTypes.EENUM; }
@@ -96,7 +85,6 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
     {FIRST_NAME_CHAR}{NAME_CHAR}*       { return RefalFiveLambdaTypes.NAME; }
 
     {MULTILINE_COMMENT}    { return RefalFiveLambdaTypes.MULTILINE_COMMENT; }
-    //{END_OF_LINE_COMMENT}  { return RefalFiveLambdaTypes.END_OF_LINE_COMMENT; }
     {LINE_COMMENT}         { return RefalFiveLambdaTypes.LINE_COMMENT; }
 
     {STRING_LITERAL}       { return RefalFiveLambdaTypes.QUOTEDSTRING; }

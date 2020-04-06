@@ -54,9 +54,7 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
     private static Set<IElementType> COMMENT_ELEMENTS = new HashSet<>();
     static {
         COMMENT_ELEMENTS.add(RefalFiveLambdaTypes.MULTILINE_COMMENT);
-        //COMMENT_ELEMENTS.add(RefalFiveLambdaTypes.END_OF_LINE_COMMENT);
         COMMENT_ELEMENTS.add(RefalFiveLambdaTypes.LINE_COMMENT);
-       // COMMENT_ELEMENTS.add(RefalFiveLambdaTypes.CPP_INLINE);
 
     }
 

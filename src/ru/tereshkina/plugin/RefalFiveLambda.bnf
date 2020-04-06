@@ -20,39 +20,29 @@ ProgramElement ::=
   | enumDefinition
   | swapDefinition
   | forwardDeclaration
- // | ForceEntry
   | SimpleFunction
- // | Comment
   | NativeIns
   |KeywordFunction
   | SpecDirective
- // | Comment
   | SEMICOLON
 
 
 IncludeDec ::= INCLUDE COMPOUND SEMICOLON
 externalDeclaration ::= (EXTERN | EXTRN | EXTERNALL ) NameList
 forwardDeclaration ::= FORWARD NameList
-//ExternKeyword ::= EXTERN | EXTRN | EXTERNALL
 enumDefinition ::= (ENUM | EENUM) NameList
 swapDefinition ::= (SWAP | ESWAP) NameList
-//ForceEntry ::= ENTRY NameList
 NameList ::= NAME (COMMA NAME)* SEMICOLON
-Comment ::= //CPP_INLINE
-             MULTILINE_COMMENT
-           // | END_OF_LINE_COMMENT
+Comment ::= MULTILINE_COMMENT
             | LINE_COMMENT
 KeywordFunction ::= (ENTRY | INLINE | DRIVE )? FuncName (Block | (COMMA FuncName)* SEMICOLON)
 SpecDirective ::= SPEC FuncName Pattern;
 SimpleFunction ::= FuncName Block
-//Function ::= (ENTRY | INLINE | SPEC )? FuncName Block
-//Block ::= LBRACE Sentences? RBRACE
 Sentences ::=  (Sentence   (SEMICOLON  Sentence)* (SEMICOLON )?) | NativeIns
 
 Block ::= LBRACE (Sentences)? RBRACE
 NativeIns ::= NATIVE_IN
 Sentence ::= sentenceCorrect | sentenceRecover
-//private sentenceCorrect ::= Pattern ConditionAssignment* ( EQUAL ResultEx | COMMA ResultEx COLON Block )
 private sentenceCorrect ::= Pattern ConditionAssignment* ( EQUAL ResultEx | COMMA ResultEx )
 private sentenceRecover ::= patternRecover
 patternRecover ::= PatternTerm+
