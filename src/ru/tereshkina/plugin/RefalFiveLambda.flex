@@ -17,7 +17,7 @@ import com.intellij.psi.TokenType;
 
 CRLF= \n|\r|\r\n
 WHITE_SPACE=[\ \t\f]
-FIRST_NAME_CHAR=[a-zA-Z]            //added Small a-z
+FIRST_NAME_CHAR=[a-zA-Z_]
 NAME_CHAR=[a-zA-Z_\-0-9]
 VARIABLE_TYPE = "s"|"t"|"e"
 
