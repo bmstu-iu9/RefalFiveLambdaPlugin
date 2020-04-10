@@ -54,12 +54,12 @@ class RefalFiveLambdaLexer implements FlexLexer {
 
   /* The ZZ_CMAP_A table has 320 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\11\0\1\3\1\1\1\14\1\15\1\2\22\0\1\3\1\0\1\20\1\53\1\26\1\13\1\54\1\16\1\62"+
-    "\1\63\1\12\1\71\1\55\1\5\1\73\1\11\12\25\1\57\1\56\1\66\1\67\1\21\1\72\1\0"+
-    "\1\43\1\52\1\51\1\27\1\33\1\47\2\4\1\31\2\4\1\46\1\36\1\34\1\50\1\44\1\4\1"+
-    "\30\1\41\1\37\1\35\1\32\1\42\1\45\1\40\1\4\1\64\1\17\1\65\1\70\1\4\1\0\4\24"+
-    "\1\10\1\24\7\4\1\22\3\4\1\22\1\6\1\7\3\4\1\23\2\4\1\60\1\0\1\61\7\0\1\14\242"+
-    "\0\2\14\26\0");
+    "\11\0\1\3\1\1\1\14\1\15\1\2\22\0\1\3\1\0\1\20\1\54\1\26\1\13\1\55\1\16\1\63"+
+    "\1\64\1\12\1\72\1\56\1\5\1\74\1\11\12\25\1\60\1\57\1\67\1\70\1\21\1\73\1\0"+
+    "\1\34\1\53\1\52\1\27\1\33\1\50\1\37\1\4\1\31\2\4\1\47\1\42\1\40\1\51\1\45"+
+    "\1\4\1\30\1\35\1\36\1\41\1\32\1\44\1\46\1\43\1\4\1\65\1\17\1\66\1\71\1\4\1"+
+    "\0\4\24\1\10\1\24\7\4\1\22\3\4\1\22\1\6\1\7\3\4\1\23\2\4\1\61\1\0\1\62\7\0"+
+    "\1\14\242\0\2\14\26\0");
 
   /** 
    * Translates DFA states to action switch labels.
@@ -71,14 +71,14 @@ class RefalFiveLambdaLexer implements FlexLexer {
     "\1\6\1\1\1\7\1\10\1\11\1\12\1\13\1\14"+
     "\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
     "\1\0\1\25\2\0\1\26\3\0\1\27\6\0\1\30"+
-    "\1\31\1\32\1\33\1\34\1\35\1\36\1\25\37\0"+
-    "\1\25\1\37\4\0\1\40\4\0\1\41\1\42\2\0"+
-    "\1\43\2\0\1\44\1\45\1\46\1\47\1\0\1\50"+
-    "\1\0\1\51\1\0\1\52\1\0\1\53\1\0\1\54"+
-    "\1\55";
+    "\1\31\1\32\1\33\1\34\1\35\1\36\1\25\42\0"+
+    "\1\25\1\37\10\0\1\40\2\0\1\41\1\42\2\0"+
+    "\1\43\3\0\1\44\1\0\1\45\1\46\1\47\1\0"+
+    "\1\50\2\0\1\51\2\0\1\52\2\0\1\53\2\0"+
+    "\1\54\2\0\1\55\1\56\1\57";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[115];
+    int [] result = new int[130];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -103,24 +103,26 @@ class RefalFiveLambdaLexer implements FlexLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\74\0\74\0\170\0\264\0\360\0\u012c\0\u0168"+
-    "\0\u01a4\0\u01e0\0\u021c\0\74\0\u0258\0\u0294\0\74\0\74"+
-    "\0\74\0\74\0\74\0\74\0\74\0\74\0\74\0\74"+
-    "\0\74\0\u02d0\0\74\0\74\0\u030c\0\u0348\0\u0384\0\u01e0"+
-    "\0\74\0\u03c0\0\u021c\0\u03fc\0\74\0\u0438\0\u0474\0\u04b0"+
-    "\0\u04ec\0\u0528\0\u0564\0\74\0\74\0\74\0\74\0\74"+
-    "\0\74\0\u030c\0\u05a0\0\u05dc\0\u0618\0\u0654\0\u0690\0\u06cc"+
-    "\0\u0708\0\u0744\0\u0780\0\u07bc\0\u07f8\0\u0834\0\u0870\0\u08ac"+
-    "\0\u08e8\0\u0924\0\u0960\0\u099c\0\u09d8\0\u0a14\0\u0a50\0\u0a8c"+
-    "\0\u0ac8\0\u0b04\0\u0b40\0\u0b7c\0\u0bb8\0\u0bf4\0\u0c30\0\u0c6c"+
-    "\0\u0ca8\0\u0ce4\0\74\0\74\0\u0d20\0\u0d5c\0\u0d98\0\u0dd4"+
-    "\0\74\0\u0e10\0\u0e4c\0\u0e88\0\u0ec4\0\74\0\74\0\u0f00"+
-    "\0\u0f3c\0\74\0\u0f78\0\u0fb4\0\74\0\74\0\74\0\74"+
-    "\0\u0ff0\0\74\0\u102c\0\74\0\u1068\0\u10a4\0\u10e0\0\74"+
-    "\0\u111c\0\74\0\74";
+    "\0\0\0\75\0\75\0\172\0\267\0\364\0\u0131\0\u016e"+
+    "\0\u01ab\0\u01e8\0\u0225\0\75\0\u0262\0\u029f\0\75\0\75"+
+    "\0\75\0\75\0\75\0\75\0\75\0\75\0\75\0\75"+
+    "\0\75\0\u02dc\0\75\0\75\0\u0319\0\u0356\0\u0393\0\u01e8"+
+    "\0\75\0\u03d0\0\u0225\0\u040d\0\75\0\u044a\0\u0487\0\u04c4"+
+    "\0\u0501\0\u053e\0\u057b\0\75\0\75\0\75\0\75\0\75"+
+    "\0\75\0\u0319\0\u05b8\0\u05f5\0\u0632\0\u066f\0\u06ac\0\u06e9"+
+    "\0\u0726\0\u0763\0\u07a0\0\u07dd\0\u081a\0\u0857\0\u0894\0\u08d1"+
+    "\0\u090e\0\u094b\0\u0988\0\u09c5\0\u0a02\0\u0a3f\0\u0a7c\0\u0ab9"+
+    "\0\u0af6\0\u0b33\0\u0b70\0\u0bad\0\u0bea\0\u0c27\0\u0c64\0\u0ca1"+
+    "\0\u0cde\0\u0d1b\0\u0d58\0\u0d95\0\u0dd2\0\75\0\75\0\u0e0f"+
+    "\0\u0e4c\0\u0e89\0\u0ec6\0\u0f03\0\u0f40\0\u0f7d\0\u0fba\0\75"+
+    "\0\u0ff7\0\u1034\0\75\0\75\0\u1071\0\u10ae\0\75\0\u10eb"+
+    "\0\u1128\0\u1165\0\75\0\u11a2\0\75\0\75\0\75\0\u11df"+
+    "\0\75\0\u121c\0\u1259\0\75\0\u1296\0\u12d3\0\u1310\0\u134d"+
+    "\0\u138a\0\75\0\u13c7\0\u1404\0\75\0\u1441\0\u147e\0\75"+
+    "\0\75\0\75";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[115];
+    int [] result = new int[130];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -145,46 +147,49 @@ class RefalFiveLambdaLexer implements FlexLexer {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\3\3\4\1\5\1\3\3\6\1\7\1\10\1\11"+
     "\1\0\1\4\1\12\1\3\1\13\1\14\3\5\1\15"+
-    "\1\16\24\5\1\17\1\20\1\21\1\22\1\23\1\24"+
+    "\1\16\25\5\1\17\1\20\1\21\1\22\1\23\1\24"+
     "\1\25\1\26\1\27\1\30\1\31\1\32\1\33\1\34"+
-    "\3\3\75\0\3\4\11\0\1\4\62\0\5\5\11\0"+
-    "\4\5\1\0\24\5\25\0\5\5\11\0\4\5\1\0"+
-    "\24\5\20\0\1\35\12\0\1\36\61\0\1\10\2\0"+
-    "\71\10\13\0\1\37\60\0\1\40\2\0\13\40\1\41"+
-    "\1\42\54\40\1\43\2\0\14\43\1\44\1\45\53\43"+
-    "\25\0\1\15\75\0\1\46\1\0\1\47\1\0\1\50"+
-    "\5\0\1\51\4\0\1\52\1\53\31\0\1\54\3\0"+
-    "\1\55\1\56\1\57\55\0\1\60\1\61\5\0\5\62"+
-    "\11\0\4\62\1\0\24\62\21\0\12\63\1\64\61\63"+
-    "\1\0\1\65\101\0\1\40\6\0\5\40\1\66\36\0"+
+    "\3\3\76\0\3\4\11\0\1\4\63\0\5\5\11\0"+
+    "\4\5\1\0\25\5\25\0\5\5\11\0\4\5\1\0"+
+    "\25\5\20\0\1\35\12\0\1\36\62\0\1\10\2\0"+
+    "\72\10\13\0\1\37\61\0\1\40\2\0\13\40\1\41"+
+    "\1\42\55\40\1\43\2\0\14\43\1\44\1\45\54\43"+
+    "\25\0\1\15\76\0\1\46\1\0\1\47\1\0\1\50"+
+    "\1\0\1\51\11\0\1\52\1\53\31\0\1\54\3\0"+
+    "\1\55\1\56\1\57\56\0\1\60\1\61\5\0\5\62"+
+    "\11\0\4\62\1\0\25\62\21\0\12\63\1\64\62\63"+
+    "\1\0\1\65\102\0\1\40\6\0\5\40\1\66\37\0"+
     "\2\40\2\0\1\40\14\0\1\43\6\0\5\43\1\67"+
-    "\36\0\2\43\2\0\1\43\35\0\1\70\77\0\1\71"+
-    "\72\0\1\72\1\73\4\0\1\74\3\0\1\75\70\0"+
-    "\1\76\1\0\1\77\72\0\1\100\100\0\1\101\23\0"+
-    "\12\63\1\102\73\63\1\0\61\63\1\103\1\65\11\103"+
-    "\1\104\60\103\10\0\1\105\13\0\2\105\1\0\1\105"+
-    "\3\0\1\105\7\0\1\105\3\0\1\105\1\0\2\105"+
-    "\31\0\1\106\13\0\2\106\1\0\1\106\3\0\1\106"+
-    "\7\0\1\106\3\0\1\106\1\0\2\106\52\0\1\107"+
-    "\110\0\1\110\2\0\1\111\56\0\1\112\74\0\1\113"+
-    "\1\0\1\114\76\0\1\115\70\0\1\116\77\0\1\117"+
-    "\63\0\1\120\112\0\1\121\51\0\1\122\43\0\11\63"+
-    "\1\123\1\102\61\63\1\103\1\65\1\0\11\103\2\0"+
-    "\57\103\1\65\11\103\1\124\60\103\10\0\1\40\13\0"+
-    "\2\40\1\0\1\40\3\0\1\40\7\0\1\40\3\0"+
-    "\1\40\1\0\2\40\31\0\1\43\13\0\2\43\1\0"+
-    "\1\43\3\0\1\43\7\0\1\43\3\0\1\43\1\0"+
-    "\2\43\53\0\1\125\72\0\1\126\110\0\1\127\62\0"+
-    "\1\130\74\0\1\131\65\0\1\132\106\0\1\133\60\0"+
-    "\1\134\2\0\1\135\104\0\1\136\100\0\1\137\55\0"+
-    "\1\140\102\0\1\141\64\0\1\142\74\0\1\143\74\0"+
-    "\1\144\74\0\1\145\75\0\1\146\77\0\1\147\63\0"+
-    "\1\150\67\0\1\151\111\0\1\152\70\0\1\153\63\0"+
-    "\1\154\67\0\1\155\100\0\1\156\67\0\1\157\76\0"+
-    "\1\160\103\0\1\161\57\0\1\162\112\0\1\163\25\0";
+    "\37\0\2\43\2\0\1\43\35\0\1\70\104\0\1\71"+
+    "\67\0\1\72\1\73\1\74\2\0\1\75\5\0\1\76"+
+    "\72\0\1\77\1\100\63\0\1\101\111\0\1\102\23\0"+
+    "\12\63\1\103\74\63\1\0\62\63\1\104\1\65\11\104"+
+    "\1\105\61\104\10\0\1\106\13\0\2\106\1\0\1\106"+
+    "\3\0\2\106\13\0\1\106\1\0\2\106\31\0\1\107"+
+    "\13\0\2\107\1\0\1\107\3\0\2\107\13\0\1\107"+
+    "\1\0\2\107\52\0\1\110\101\0\1\111\10\0\1\112"+
+    "\2\0\1\113\62\0\1\114\71\0\1\115\103\0\1\116"+
+    "\66\0\1\117\2\0\1\120\71\0\1\121\72\0\1\122"+
+    "\73\0\1\123\114\0\1\124\51\0\1\125\44\0\11\63"+
+    "\1\126\1\103\62\63\1\104\1\65\1\0\11\104\2\0"+
+    "\60\104\1\65\11\104\1\127\61\104\10\0\1\40\13\0"+
+    "\2\40\1\0\1\40\3\0\2\40\13\0\1\40\1\0"+
+    "\2\40\31\0\1\43\13\0\2\43\1\0\1\43\3\0"+
+    "\2\43\13\0\1\43\1\0\2\43\53\0\1\130\72\0"+
+    "\1\131\75\0\1\132\112\0\1\133\66\0\1\134\71\0"+
+    "\1\135\72\0\1\136\70\0\1\137\106\0\1\140\62\0"+
+    "\1\141\2\0\1\142\106\0\1\143\101\0\1\144\55\0"+
+    "\1\145\105\0\1\146\63\0\1\147\72\0\1\150\103\0"+
+    "\1\151\75\0\1\152\75\0\1\153\65\0\1\154\106\0"+
+    "\1\155\72\0\1\156\71\0\1\157\64\0\1\160\113\0"+
+    "\1\161\61\0\1\162\100\0\1\163\67\0\1\164\70\0"+
+    "\1\165\75\0\1\166\104\0\1\167\64\0\1\170\101\0"+
+    "\1\171\72\0\1\172\74\0\1\173\75\0\1\174\67\0"+
+    "\1\175\76\0\1\176\102\0\1\177\104\0\1\200\77\0"+
+    "\1\201\61\0\1\202\35\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[4440];
+    int [] result = new int[5307];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -224,12 +229,13 @@ class RefalFiveLambdaLexer implements FlexLexer {
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
     "\1\0\1\10\1\11\10\1\1\11\2\1\13\11\1\1"+
     "\2\11\1\0\1\1\2\0\1\11\3\0\1\11\6\0"+
-    "\6\11\2\1\37\0\2\11\4\0\1\11\4\0\2\11"+
-    "\2\0\1\11\2\0\4\11\1\0\1\11\1\0\1\11"+
-    "\1\0\1\1\1\0\1\11\1\0\2\11";
+    "\6\11\2\1\42\0\2\11\10\0\1\11\2\0\2\11"+
+    "\2\0\1\11\3\0\1\11\1\0\3\11\1\0\1\11"+
+    "\2\0\1\11\2\0\1\1\2\0\1\11\2\0\1\11"+
+    "\2\0\3\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[115];
+    int [] result = new int[130];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -546,227 +552,237 @@ class RefalFiveLambdaLexer implements FlexLexer {
             { yybegin(YYINITIAL); return TokenType.BAD_CHARACTER;
             } 
             // fall through
-          case 46: break;
+          case 48: break;
           case 2: 
             { return TokenType.WHITE_SPACE;
             } 
             // fall through
-          case 47: break;
+          case 49: break;
           case 3: 
             { return RefalFiveLambdaTypes.NAME;
             } 
             // fall through
-          case 48: break;
+          case 50: break;
           case 4: 
             { return RefalFiveLambdaTypes.LINE_COMMENT;
             } 
             // fall through
-          case 49: break;
+          case 51: break;
           case 5: 
             { return RefalFiveLambdaTypes.RCHEVRON;
             } 
             // fall through
-          case 50: break;
+          case 52: break;
           case 6: 
             { return RefalFiveLambdaTypes.INTEGER_LITERAL;
             } 
             // fall through
-          case 51: break;
+          case 53: break;
           case 7: 
             { return RefalFiveLambdaTypes.SHARP;
             } 
             // fall through
-          case 52: break;
+          case 54: break;
           case 8: 
             { return RefalFiveLambdaTypes.AMPERSAND;
             } 
             // fall through
-          case 53: break;
+          case 55: break;
           case 9: 
             { return RefalFiveLambdaTypes.COMMA;
             } 
             // fall through
-          case 54: break;
+          case 56: break;
           case 10: 
             { return RefalFiveLambdaTypes.SEMICOLON;
             } 
             // fall through
-          case 55: break;
+          case 57: break;
           case 11: 
             { return RefalFiveLambdaTypes.COLON;
             } 
             // fall through
-          case 56: break;
+          case 58: break;
           case 12: 
             { return RefalFiveLambdaTypes.LBRACE;
             } 
             // fall through
-          case 57: break;
+          case 59: break;
           case 13: 
             { return RefalFiveLambdaTypes.RBRACE;
             } 
             // fall through
-          case 58: break;
+          case 60: break;
           case 14: 
             { return RefalFiveLambdaTypes.LPAREN;
             } 
             // fall through
-          case 59: break;
+          case 61: break;
           case 15: 
             { return RefalFiveLambdaTypes.RPAREN;
             } 
             // fall through
-          case 60: break;
+          case 62: break;
           case 16: 
             { return RefalFiveLambdaTypes.LBRACKET;
             } 
             // fall through
-          case 61: break;
+          case 63: break;
           case 17: 
             { return RefalFiveLambdaTypes.RBRACKET;
             } 
             // fall through
-          case 62: break;
+          case 64: break;
           case 18: 
             { return RefalFiveLambdaTypes.LCHEVRON;
             } 
             // fall through
-          case 63: break;
+          case 65: break;
           case 19: 
             { return RefalFiveLambdaTypes.EQUAL;
             } 
             // fall through
-          case 64: break;
+          case 66: break;
           case 20: 
             { return RefalFiveLambdaTypes.CARET;
             } 
             // fall through
-          case 65: break;
+          case 67: break;
           case 21: 
             { return RefalFiveLambdaTypes.MULTILINE_COMMENT;
             } 
             // fall through
-          case 66: break;
+          case 68: break;
           case 22: 
             { return RefalFiveLambdaTypes.QUOTEDSTRING;
             } 
             // fall through
-          case 67: break;
+          case 69: break;
           case 23: 
             { return RefalFiveLambdaTypes.COMPOUND;
             } 
             // fall through
-          case 68: break;
+          case 70: break;
           case 24: 
             { return RefalFiveLambdaTypes.SUB;
             } 
             // fall through
-          case 69: break;
+          case 71: break;
           case 25: 
             { return RefalFiveLambdaTypes.DIV;
             } 
             // fall through
-          case 70: break;
+          case 72: break;
           case 26: 
             { return RefalFiveLambdaTypes.MUL;
             } 
             // fall through
-          case 71: break;
+          case 73: break;
           case 27: 
             { return RefalFiveLambdaTypes.MOD;
             } 
             // fall through
-          case 72: break;
+          case 74: break;
           case 28: 
             { return RefalFiveLambdaTypes.ADD;
             } 
             // fall through
-          case 73: break;
+          case 75: break;
           case 29: 
             { return RefalFiveLambdaTypes.RESIDUE;
             } 
             // fall through
-          case 74: break;
+          case 76: break;
           case 30: 
             { return RefalFiveLambdaTypes.VARIABLE;
             } 
             // fall through
-          case 75: break;
+          case 77: break;
           case 31: 
             { return RefalFiveLambdaTypes.NATIVE_IN;
             } 
             // fall through
-          case 76: break;
+          case 78: break;
           case 32: 
             { return RefalFiveLambdaTypes.ENUM;
             } 
             // fall through
-          case 77: break;
+          case 79: break;
           case 33: 
             { return RefalFiveLambdaTypes.SWAP;
             } 
             // fall through
-          case 78: break;
+          case 80: break;
           case 34: 
             { return RefalFiveLambdaTypes.SPEC;
             } 
             // fall through
-          case 79: break;
+          case 81: break;
           case 35: 
             { return RefalFiveLambdaTypes.DRIVE;
             } 
             // fall through
-          case 80: break;
+          case 82: break;
           case 36: 
             { return RefalFiveLambdaTypes.EENUM;
             } 
             // fall through
-          case 81: break;
+          case 83: break;
           case 37: 
-            { return RefalFiveLambdaTypes.ENTRY;
-            } 
-            // fall through
-          case 82: break;
-          case 38: 
             { return RefalFiveLambdaTypes.ESWAP;
             } 
             // fall through
-          case 83: break;
+          case 84: break;
+          case 38: 
+            { return RefalFiveLambdaTypes.ENTRY;
+            } 
+            // fall through
+          case 85: break;
           case 39: 
             { return RefalFiveLambdaTypes.EXTRN;
             } 
             // fall through
-          case 84: break;
+          case 86: break;
           case 40: 
             { return RefalFiveLambdaTypes.LABEL;
             } 
             // fall through
-          case 85: break;
+          case 87: break;
           case 41: 
             { return RefalFiveLambdaTypes.INLINE;
             } 
             // fall through
-          case 86: break;
+          case 88: break;
           case 42: 
             { return RefalFiveLambdaTypes.EXTERN;
             } 
             // fall through
-          case 87: break;
+          case 89: break;
           case 43: 
             { return RefalFiveLambdaTypes.INCLUDE;
             } 
             // fall through
-          case 88: break;
+          case 90: break;
           case 44: 
             { return RefalFiveLambdaTypes.FORWARD;
             } 
             // fall through
-          case 89: break;
+          case 91: break;
           case 45: 
             { return RefalFiveLambdaTypes.EXTERNALL;
             } 
             // fall through
-          case 90: break;
+          case 92: break;
+          case 46: 
+            { return RefalFiveLambdaTypes.INTRINSIC;
+            } 
+            // fall through
+          case 93: break;
+          case 47: 
+            { return RefalFiveLambdaTypes.EASTEREGG;
+            } 
+            // fall through
+          case 94: break;
           default:
             zzScanError(ZZ_NO_MATCH);
           }

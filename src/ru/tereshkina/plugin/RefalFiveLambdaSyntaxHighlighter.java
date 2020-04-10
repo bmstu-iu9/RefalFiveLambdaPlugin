@@ -50,6 +50,8 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.LABEL);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SPEC);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SWAP);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INTRINSIC);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EASTEREGG);
     }
 
     private static Set<IElementType> COMMENT_ELEMENTS = new HashSet<>();

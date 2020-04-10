@@ -44,6 +44,7 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
 <YYINITIAL> {
 
     "$DRIVE"        { return RefalFiveLambdaTypes.DRIVE; }
+    "$EASTEREGG"    { return RefalFiveLambdaTypes.EASTEREGG; }
     "$EENUM"        { return RefalFiveLambdaTypes.EENUM; }
     "$ENTRY"        { return RefalFiveLambdaTypes.ENTRY; }
     "$ENUM"         { return RefalFiveLambdaTypes.ENUM; }
@@ -54,6 +55,7 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
     "$FORWARD"      { return RefalFiveLambdaTypes.FORWARD; }
     "$INCLUDE"      { return RefalFiveLambdaTypes.INCLUDE; }
     "$INLINE"       { return RefalFiveLambdaTypes.INLINE; }
+    "$INTRINSIC"    { return RefalFiveLambdaTypes.INTRINSIC; }
     "$LABEL"        { return RefalFiveLambdaTypes.LABEL; }
     "$SPEC"         { return RefalFiveLambdaTypes.SPEC; }
     "$SWAP"         { return RefalFiveLambdaTypes.SWAP; }

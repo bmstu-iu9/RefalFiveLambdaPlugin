@@ -76,6 +76,12 @@ public class RefalFiveLambdaProgramElementImpl extends ASTWrapperPsiElement impl
 
   @Override
   @Nullable
+  public RefalFiveLambdaIntrinsicDeclaration getIntrinsicDeclaration() {
+    return findChildByClass(RefalFiveLambdaIntrinsicDeclaration.class);
+  }
+
+  @Override
+  @Nullable
   public RefalFiveLambdaLabelDefinition getLabelDefinition() {
     return findChildByClass(RefalFiveLambdaLabelDefinition.class);
   }

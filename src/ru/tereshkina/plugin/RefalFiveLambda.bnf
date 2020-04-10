@@ -20,6 +20,7 @@ ProgramElement ::=
   | enumDefinition
   | swapDefinition
   | labelDefinition
+  | intrinsicDeclaration
   | forwardDeclaration
   | SimpleFunction
   | NativeIns
@@ -34,6 +35,7 @@ forwardDeclaration ::= FORWARD NameList
 enumDefinition ::= (ENUM | EENUM) NameList
 swapDefinition ::= (SWAP | ESWAP) NameList
 labelDefinition ::= LABEL NameList
+intrinsicDeclaration ::= INTRINSIC NameList
 NameList ::= NAME (COMMA NAME)* SEMICOLON
 Comment ::= MULTILINE_COMMENT
             | LINE_COMMENT
@@ -106,6 +108,7 @@ Atom ::=
     | INTEGER_LITERAL
     | Identifier
     | FuncPtr
+    | EASTEREGG
 
 
 Identifier ::= NAME

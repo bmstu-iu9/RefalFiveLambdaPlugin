@@ -25,6 +25,7 @@ public interface RefalFiveLambdaTypes {
   IElementType FUNC_PTR = new RefalFiveLambdaElementType("FUNC_PTR");
   IElementType IDENTIFIER = new RefalFiveLambdaElementType("IDENTIFIER");
   IElementType INCLUDE_DEC = new RefalFiveLambdaElementType("INCLUDE_DEC");
+  IElementType INTRINSIC_DECLARATION = new RefalFiveLambdaElementType("INTRINSIC_DECLARATION");
   IElementType KEYWORD_FUNCTION = new RefalFiveLambdaElementType("KEYWORD_FUNCTION");
   IElementType LABEL_DEFINITION = new RefalFiveLambdaElementType("LABEL_DEFINITION");
   IElementType NAME_LIST = new RefalFiveLambdaElementType("NAME_LIST");
@@ -53,6 +54,7 @@ public interface RefalFiveLambdaTypes {
   IElementType COMPOUND = new RefalFiveLambdaTokenType("COMPOUND");
   IElementType DIV = new RefalFiveLambdaTokenType("DIV");
   IElementType DRIVE = new RefalFiveLambdaTokenType("DRIVE");
+  IElementType EASTEREGG = new RefalFiveLambdaTokenType("EASTEREGG");
   IElementType EENUM = new RefalFiveLambdaTokenType("EENUM");
   IElementType ENTRY = new RefalFiveLambdaTokenType("ENTRY");
   IElementType ENUM = new RefalFiveLambdaTokenType("ENUM");
@@ -65,6 +67,7 @@ public interface RefalFiveLambdaTypes {
   IElementType INCLUDE = new RefalFiveLambdaTokenType("INCLUDE");
   IElementType INLINE = new RefalFiveLambdaTokenType("INLINE");
   IElementType INTEGER_LITERAL = new RefalFiveLambdaTokenType("INTEGER_LITERAL");
+  IElementType INTRINSIC = new RefalFiveLambdaTokenType("INTRINSIC");
   IElementType LABEL = new RefalFiveLambdaTokenType("LABEL");
   IElementType LBRACE = new RefalFiveLambdaTokenType("LBRACE");
   IElementType LBRACKET = new RefalFiveLambdaTokenType("LBRACKET");
@@ -142,6 +145,9 @@ public interface RefalFiveLambdaTypes {
       }
       else if (type == INCLUDE_DEC) {
         return new RefalFiveLambdaIncludeDecImpl(node);
+      }
+      else if (type == INTRINSIC_DECLARATION) {
+        return new RefalFiveLambdaIntrinsicDeclarationImpl(node);
       }
       else if (type == KEYWORD_FUNCTION) {
         return new RefalFiveLambdaKeywordFunctionImpl(node);

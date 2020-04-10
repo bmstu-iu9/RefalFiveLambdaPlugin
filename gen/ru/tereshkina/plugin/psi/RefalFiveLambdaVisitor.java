@@ -139,6 +139,10 @@ public class RefalFiveLambdaVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
+  public void visitIntrinsicDeclaration(@NotNull RefalFiveLambdaIntrinsicDeclaration o) {
+    visitPsiElement(o);
+  }
+
   public void visitLabelDefinition(@NotNull RefalFiveLambdaLabelDefinition o) {
     visitPsiElement(o);
   }

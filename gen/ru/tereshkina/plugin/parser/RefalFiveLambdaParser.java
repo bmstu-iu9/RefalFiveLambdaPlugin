@@ -71,6 +71,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
   //     | INTEGER_LITERAL
   //     | Identifier
   //     | FuncPtr
+  //     | EASTEREGG
   public static boolean Atom(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Atom")) return false;
     boolean r;
@@ -80,6 +81,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     if (!r) r = consumeToken(b, INTEGER_LITERAL);
     if (!r) r = Identifier(b, l + 1);
     if (!r) r = FuncPtr(b, l + 1);
+    if (!r) r = consumeToken(b, EASTEREGG);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
@@ -471,6 +473,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
   //   | enumDefinition
   //   | swapDefinition
   //   | labelDefinition
+  //   | intrinsicDeclaration
   //   | forwardDeclaration
   //   | SimpleFunction
   //   | NativeIns
@@ -486,6 +489,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     if (!r) r = enumDefinition(b, l + 1);
     if (!r) r = swapDefinition(b, l + 1);
     if (!r) r = labelDefinition(b, l + 1);
+    if (!r) r = intrinsicDeclaration(b, l + 1);
     if (!r) r = forwardDeclaration(b, l + 1);
     if (!r) r = SimpleFunction(b, l + 1);
     if (!r) r = NativeIns(b, l + 1);
@@ -788,6 +792,19 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     r = consumeToken(b, FORWARD);
     r = r && NameList(b, l + 1);
     exit_section_(b, m, FORWARD_DECLARATION, r);
+    return r;
+  }
+
+  /* ********************************************************** */
+  // INTRINSIC NameList
+  public static boolean intrinsicDeclaration(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "intrinsicDeclaration")) return false;
+    if (!nextTokenIs(b, INTRINSIC)) return false;
+    boolean r;
+    Marker m = enter_section_(b);
+    r = consumeToken(b, INTRINSIC);
+    r = r && NameList(b, l + 1);
+    exit_section_(b, m, INTRINSIC_DECLARATION, r);
     return r;
   }
 

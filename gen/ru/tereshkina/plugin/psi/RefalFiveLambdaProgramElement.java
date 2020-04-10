@@ -32,6 +32,9 @@ public interface RefalFiveLambdaProgramElement extends PsiElement {
   RefalFiveLambdaForwardDeclaration getForwardDeclaration();
 
   @Nullable
+  RefalFiveLambdaIntrinsicDeclaration getIntrinsicDeclaration();
+
+  @Nullable
   RefalFiveLambdaLabelDefinition getLabelDefinition();
 
   @Nullable
