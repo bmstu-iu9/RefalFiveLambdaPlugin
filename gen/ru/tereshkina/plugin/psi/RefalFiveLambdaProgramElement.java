@@ -38,6 +38,9 @@ public interface RefalFiveLambdaProgramElement extends PsiElement {
   RefalFiveLambdaLabelDefinition getLabelDefinition();
 
   @Nullable
+  RefalFiveLambdaMetaDeclaration getMetaDeclaration();
+
+  @Nullable
   RefalFiveLambdaSwapDefinition getSwapDefinition();
 
 }

@@ -37,6 +37,7 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
     private static Set<IElementType> KEYWORD_ELEMENTS = new HashSet<>();
     static {
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.DRIVE);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EASTEREGG);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EENUM);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ENTRY);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.ENUM);
@@ -47,11 +48,11 @@ public class RefalFiveLambdaSyntaxHighlighter extends SyntaxHighlighterBase {
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.FORWARD);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INCLUDE);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INLINE);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INTRINSIC);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.LABEL);
+        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.META);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SPEC);
         KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.SWAP);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.INTRINSIC);
-        KEYWORD_ELEMENTS.add(RefalFiveLambdaTypes.EASTEREGG);
     }
 
     private static Set<IElementType> COMMENT_ELEMENTS = new HashSet<>();

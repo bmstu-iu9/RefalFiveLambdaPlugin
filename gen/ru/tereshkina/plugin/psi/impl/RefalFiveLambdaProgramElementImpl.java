@@ -88,6 +88,12 @@ public class RefalFiveLambdaProgramElementImpl extends ASTWrapperPsiElement impl
 
   @Override
   @Nullable
+  public RefalFiveLambdaMetaDeclaration getMetaDeclaration() {
+    return findChildByClass(RefalFiveLambdaMetaDeclaration.class);
+  }
+
+  @Override
+  @Nullable
   public RefalFiveLambdaSwapDefinition getSwapDefinition() {
     return findChildByClass(RefalFiveLambdaSwapDefinition.class);
   }

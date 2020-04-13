@@ -21,10 +21,11 @@ ProgramElement ::=
   | swapDefinition
   | labelDefinition
   | intrinsicDeclaration
+  | metaDeclaration
   | forwardDeclaration
   | SimpleFunction
   | NativeIns
-  |KeywordFunction
+  | KeywordFunction
   | SpecDirective
   | SEMICOLON
 
@@ -36,6 +37,7 @@ enumDefinition ::= (ENUM | EENUM) NameList
 swapDefinition ::= (SWAP | ESWAP) NameList
 labelDefinition ::= LABEL NameList
 intrinsicDeclaration ::= INTRINSIC NameList
+metaDeclaration ::= META NameList
 NameList ::= NAME (COMMA NAME)* SEMICOLON
 Comment ::= MULTILINE_COMMENT
             | LINE_COMMENT

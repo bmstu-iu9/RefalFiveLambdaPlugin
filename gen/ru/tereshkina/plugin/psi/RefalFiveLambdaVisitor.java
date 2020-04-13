@@ -147,6 +147,10 @@ public class RefalFiveLambdaVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
+  public void visitMetaDeclaration(@NotNull RefalFiveLambdaMetaDeclaration o) {
+    visitPsiElement(o);
+  }
+
   public void visitPatternRecover(@NotNull RefalFiveLambdaPatternRecover o) {
     visitPsiElement(o);
   }

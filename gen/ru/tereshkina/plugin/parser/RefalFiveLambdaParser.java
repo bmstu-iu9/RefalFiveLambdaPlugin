@@ -474,10 +474,11 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
   //   | swapDefinition
   //   | labelDefinition
   //   | intrinsicDeclaration
+  //   | metaDeclaration
   //   | forwardDeclaration
   //   | SimpleFunction
   //   | NativeIns
-  //   |KeywordFunction
+  //   | KeywordFunction
   //   | SpecDirective
   //   | SEMICOLON
   public static boolean ProgramElement(PsiBuilder b, int l) {
@@ -490,6 +491,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     if (!r) r = swapDefinition(b, l + 1);
     if (!r) r = labelDefinition(b, l + 1);
     if (!r) r = intrinsicDeclaration(b, l + 1);
+    if (!r) r = metaDeclaration(b, l + 1);
     if (!r) r = forwardDeclaration(b, l + 1);
     if (!r) r = SimpleFunction(b, l + 1);
     if (!r) r = NativeIns(b, l + 1);
@@ -818,6 +820,19 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     r = consumeToken(b, LABEL);
     r = r && NameList(b, l + 1);
     exit_section_(b, m, LABEL_DEFINITION, r);
+    return r;
+  }
+
+  /* ********************************************************** */
+  // META NameList
+  public static boolean metaDeclaration(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "metaDeclaration")) return false;
+    if (!nextTokenIs(b, META)) return false;
+    boolean r;
+    Marker m = enter_section_(b);
+    r = consumeToken(b, META);
+    r = r && NameList(b, l + 1);
+    exit_section_(b, m, META_DECLARATION, r);
     return r;
   }
 

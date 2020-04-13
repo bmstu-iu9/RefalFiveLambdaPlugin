@@ -28,6 +28,7 @@ public interface RefalFiveLambdaTypes {
   IElementType INTRINSIC_DECLARATION = new RefalFiveLambdaElementType("INTRINSIC_DECLARATION");
   IElementType KEYWORD_FUNCTION = new RefalFiveLambdaElementType("KEYWORD_FUNCTION");
   IElementType LABEL_DEFINITION = new RefalFiveLambdaElementType("LABEL_DEFINITION");
+  IElementType META_DECLARATION = new RefalFiveLambdaElementType("META_DECLARATION");
   IElementType NAME_LIST = new RefalFiveLambdaElementType("NAME_LIST");
   IElementType NATIVE_INS = new RefalFiveLambdaElementType("NATIVE_INS");
   IElementType PATTERN = new RefalFiveLambdaElementType("PATTERN");
@@ -74,6 +75,7 @@ public interface RefalFiveLambdaTypes {
   IElementType LCHEVRON = new RefalFiveLambdaTokenType("LCHEVRON");
   IElementType LINE_COMMENT = new RefalFiveLambdaTokenType("LINE_COMMENT");
   IElementType LPAREN = new RefalFiveLambdaTokenType("LPAREN");
+  IElementType META = new RefalFiveLambdaTokenType("META");
   IElementType MOD = new RefalFiveLambdaTokenType("MOD");
   IElementType MUL = new RefalFiveLambdaTokenType("MUL");
   IElementType MULTILINE_COMMENT = new RefalFiveLambdaTokenType("MULTILINE_COMMENT");
@@ -154,6 +156,9 @@ public interface RefalFiveLambdaTypes {
       }
       else if (type == LABEL_DEFINITION) {
         return new RefalFiveLambdaLabelDefinitionImpl(node);
+      }
+      else if (type == META_DECLARATION) {
+        return new RefalFiveLambdaMetaDeclarationImpl(node);
       }
       else if (type == NAME_LIST) {
         return new RefalFiveLambdaNameListImpl(node);
