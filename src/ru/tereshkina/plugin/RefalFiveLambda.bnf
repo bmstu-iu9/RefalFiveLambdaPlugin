@@ -111,6 +111,7 @@ Atom ::=
     | Identifier
     | FuncPtr
     | EASTEREGG
+    | SCOPEID
 
 
 Identifier ::= NAME

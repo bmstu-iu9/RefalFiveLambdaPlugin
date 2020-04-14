@@ -87,6 +87,7 @@ public interface RefalFiveLambdaTypes {
   IElementType RCHEVRON = new RefalFiveLambdaTokenType("RCHEVRON");
   IElementType RESIDUE = new RefalFiveLambdaTokenType("RESIDUE");
   IElementType RPAREN = new RefalFiveLambdaTokenType("RPAREN");
+  IElementType SCOPEID = new RefalFiveLambdaTokenType("SCOPEID");
   IElementType SEMICOLON = new RefalFiveLambdaTokenType("SEMICOLON");
   IElementType SHARP = new RefalFiveLambdaTokenType("SHARP");
   IElementType SPEC = new RefalFiveLambdaTokenType("SPEC");

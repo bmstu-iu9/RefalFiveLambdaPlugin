@@ -72,6 +72,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
   //     | Identifier
   //     | FuncPtr
   //     | EASTEREGG
+  //     | SCOPEID
   public static boolean Atom(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Atom")) return false;
     boolean r;
@@ -82,6 +83,7 @@ public class RefalFiveLambdaParser implements PsiParser, LightPsiParser {
     if (!r) r = Identifier(b, l + 1);
     if (!r) r = FuncPtr(b, l + 1);
     if (!r) r = consumeToken(b, EASTEREGG);
+    if (!r) r = consumeToken(b, SCOPEID);
     exit_section_(b, l, m, r, false, null);
     return r;
   }

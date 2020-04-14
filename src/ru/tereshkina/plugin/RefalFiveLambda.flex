@@ -58,6 +58,7 @@ INTEGER_LITERAL={DECIMAL_INTEGER_LITERAL}
     "$INTRINSIC"    { return RefalFiveLambdaTypes.INTRINSIC; }
     "$LABEL"        { return RefalFiveLambdaTypes.LABEL; }
     "$META"         { return RefalFiveLambdaTypes.META; }
+    "$SCOPEID"      { return RefalFiveLambdaTypes.SCOPEID; }
     "$SPEC"         { return RefalFiveLambdaTypes.SPEC; }
     "$SWAP"         { return RefalFiveLambdaTypes.SWAP; }
 
